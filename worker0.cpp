@@ -29,7 +29,7 @@ void Waiter::Show() const {
   std::cout << "Panache rating: " << panache << "\n";
 }
 char * Singer::pv[] = {"other", "alto", "contralto",
-                       "soprano", "bass", "baritone", "tenor"};
+                             "soprano", "bass", "baritone", "tenor"};
 void Singer::Set() {
   Worker::Set();
   std::cout << "Enter number for singer's vocal range:\n";
@@ -41,7 +41,7 @@ void Singer::Set() {
   }
   if (i % 4 != 0)
     std::cout << std::endl;
-  while (std::cin voice && (voice < 0 || voice >= Vtypes) )
+  while (std::cin>>voice && (voice < 0 || voice >= Vtypes))
     std::cout << "Please enter a value >= - and < "
               << Vtypes << std::endl;
   while (std::cin.get() != '\n')
